@@ -12,6 +12,9 @@ func Router() *chi.Mux {
 	r.Route("/vehicles", func(r chi.Router) {
 		r.Post("/", controller.CreateVehicle)
 	})
+	r.Route("/users", func(r chi.Router) {
+		r.Post("/", controller.CreateUser)
+	})
 
 	return r
 
